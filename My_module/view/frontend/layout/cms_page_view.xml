@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <container name="my.content" htmlTag="h1">
+            <block class="Magento\Framework\View\Element\Text" name="my.custom.text">
+                <arguments>
+                    <argument name="text" xsi:type="string">Добро пожаловать в Perspective Team</argument>
+                </arguments>
+            </block>
+        </container>
+
+
+        <container name="perspective-ul" htmlTag="ul" htmlClass="footer links">
+
+            <block class="Magento\Framework\View\Element\Text" name="perspective-li-image">
+                <arguments>
+                    <argument name="text" xsi:type="string">
+                        <![CDATA[
+                        <li class="nav item">
+                            <img src="https://perspectiveteam.com/static/version1723550326/frontend/Perspective/default/en_US/images/header/logo.svg" alt="Perspective Team" />
+                        </li>
+                        ]]>
+                    </argument>
+                </arguments>
+            </block>
+
+            <block class="Magento\Framework\View\Element\Text" name="perspective-li-address">
+                <arguments>
+                    <argument name="text" xsi:type="string"><![CDATA[<li class="nav item">Kyiv, 15a Tumaniana perspectiveteam.com</li>]]>
+                    </argument>
+                </arguments>
+            </block>
+
+            <block class="Magento\Framework\View\Element\Text" name="perspective-li-email">
+                <arguments>
+                    <argument name="text" xsi:type="string"><![CDATA[<li class="nav item">order@perspectiveteam.com</li>]]></argument>
+                </arguments>
+            </block>
+
+            <block class="Magento\Framework\View\Element\Text" name="perspective-li-phone">
+                <arguments>
+                    <argument name="text" xsi:type="string"><![CDATA[<li class="nav item">+1 312-239-0843</li>]]></argument>
+                </arguments>
+            </block>
+
+        </container>
+
+
+
+
+
+        <move element="perspective-ul" destination="footer"  after="-"/>
+        <move element="my.content" destination="content"  before="-"/>
+    </body>
+</page>
+
